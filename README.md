@@ -9,6 +9,8 @@ Compiles garden edn syntax to css
 You can choose some examples or write your own edn. 
 There must be valid edn and it has to be compilable with garden.
 
+http://fnumatic.github.io/gardencss/
+
 ## Development
 
 To get an interactive development environment run:
