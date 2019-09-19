@@ -1,0 +1,5 @@
+^{:watch-dirs ["test" "src"]
+  :css-dirs ["resources/public/css"]}
+  ;:auto-testing true}
+{:main gardencss.core}
+ ;:source-map "resources/public/cljs-out/dev-main.js.map"}
