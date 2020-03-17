@@ -6,7 +6,6 @@
    [gardencss.views.home :as views ]
    [gardencss.use-cases.core-cases :as ccases]
    [gardencss.routes :as routes]
-   [reagent.core :as reagent :refer [atom]]
    [reagent.dom :refer [render]]))
 
 
