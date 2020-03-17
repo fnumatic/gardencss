@@ -6,7 +6,8 @@
    [gardencss.views.home :as views ]
    [gardencss.use-cases.core-cases :as ccases]
    [gardencss.routes :as routes]
-   [reagent.core :as reagent :refer [atom]]))
+   [reagent.core :as reagent :refer [atom]]
+   [reagent.dom :refer [render]]))
 
 
 (defn dev-setup []
@@ -23,7 +24,7 @@
 (defn mount [el]
  (re-frame/clear-subscription-cache!)
  (styl/inject-trace-styles js/document) 
- (reagent/render-component [views/main-panel] el))
+ (render [views/main-panel] el))
 
 
 
