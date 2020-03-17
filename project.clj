@@ -7,13 +7,13 @@
   :min-lein-version "2.7.1"
 
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojure/clojurescript "1.10.520"]
-                 [reagent "0.8.1"]
-                 [re-frame "0.10.9"]
+                 [org.clojure/clojurescript "1.10.597"]
+                 [reagent "0.10.0"]
+                 [re-frame "0.12.0"]
                  [garden "1.3.9"] 
-                 [metosin/reitit "0.3.9"]
-                 [metosin/reitit-schema "0.3.9"]
-                 [metosin/reitit-frontend "0.3.9"]]
+                 [metosin/reitit "0.4.2"]
+                 [metosin/reitit-schema "0.4.2"]
+                 [metosin/reitit-frontend "0.4.2"]]
                  
 
   :source-paths ["src"]
