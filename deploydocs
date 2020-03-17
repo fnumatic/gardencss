@@ -1,8 +1,9 @@
  #!/bin/sh
 
 RP=resources/public
+DOCS=docs
 
-mkdir docs/cljs-out 2> /dev/null 
-cp $RP/index.html docs
-cp -r $RP/css docs
-cp $RP/cljs-out/dev-main.js docs/cljs-out
+mkdir $DOCS/js 2> /dev/null 
+cp $RP/index.html $DOCS
+cp -r $RP/css $DOCS
+cp $RP/js/main.js $DOCS/js

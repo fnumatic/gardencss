@@ -1,0 +1,13 @@
+{:deps   {:aliases [:dev :test]}
+
+ :nrepl  {:port 7002}
+ :builds {:app {:target           :browser
+                :asset-path       "js"
+                :output-dir       "resources/public/js"
+
+                :modules          {:main {:entries [gardencss.core]
+                                          :init-fn gardencss.core/init}}
+                :devtools         {:http-port 8021
+                                   :http-root "resources/public/"
+                                   :after-load gardencss.core/re-render
+                                   :preloads  [devtools.preload shadow.remote.runtime.cljs.browser]}}}}
