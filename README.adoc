@@ -1,41 +1,39 @@
-# gardencss
+= gardencss
 
 Compiles garden edn syntax to css
 
-[Garden - Generate CSS with Clojure](https://github.com/noprompt/garden)
+https://github.com/noprompt/garden[Garden - Generate CSS with Clojure]
 
-## Overview
+== Overview
 
-You can choose some examples or write your own edn. 
+You can choose some examples or write your own edn.
 There must be valid edn and it has to be compilable with garden.
 
 http://fnumatic.github.io/gardencss/
 
-## Development
+== Migration to Shadow-cljs / tools deps
+
+* slim down tooling
+* slim down config
+* better interop with npm
+
+== Development
 
 To get an interactive development environment run:
 
-    lein fig:build
+npx shadow-cljs watch app
 
 This will auto compile and send all changes to the browser without the
 need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
-
-    (js/alert "Am I connected?")
-
-and you should see an alert in the browser window.
-
-To clean all compiled files:
-
-	lein clean
+get a Browser Connected REPL. 
 
 To create a production build run:
 
-	lein clean
-	lein fig:min
+npx shadow-cljs release app
 
+https://shadow-cljs.github.io/docs/UsersGuide.html
 
-## License
+== License
 
 Copyright © 2019
 
