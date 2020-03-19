@@ -19,7 +19,7 @@
 
 (defn change-selection [_ [_ v]]
   {:change-route v})
- 
+
 (defn change-document [db [_ v]]
   (let [doc (pp  (get docs (keyword v) ""))] 
      (assoc-in db [:text/input] doc)))
@@ -49,18 +49,18 @@
 (defn calc-compilestats [[cs inp out] _]
   (cond
     (not (blank? cs))
-    {:msg "no valid edn struct"
+    {:msg   "no valid edn struct"
      :class "reddot"}
     
     (and (blank? cs)
-           (and (not (blank? inp)) 
-                (blank? out)))
-    {:msg "css compile failed"
+         (and (not (blank? inp)) 
+              (blank? out)))
+    {:msg   "css compile failed"
      :class "reddot"}
-   
+    
     :else
-    {:msg ""
-     :class "greendot" }))
+    {:msg   ""
+     :class "greendot"}))
 
 (defn render [txt _]  
  (css (cljs.reader/read-string txt)))

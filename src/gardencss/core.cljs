@@ -37,10 +37,10 @@
 
 (defn init []
   (re-frame/dispatch-sync [::ccases/initialize-db])
+  (re-frame/dispatch  [:set-selection "simple"] )
   ;(dev-setup)
   (routes/app-routes))
 
-(defonce inits (init))
 
 ;; specify reload hook with ^;after-load metadata
 (defn ^:after-load on-reload []
